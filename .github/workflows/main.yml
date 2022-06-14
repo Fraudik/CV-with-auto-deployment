@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  make_cv_pdf_job:
+    runs-on: ubuntu-latest
+    name: A job to make pdf
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Make CV pdf
+      uses: ./
