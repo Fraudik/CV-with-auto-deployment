@@ -1,0 +1,33 @@
+name: Compile and publish CV
+on:
+  push:
+    branches:
+      main
+
+jobs:
+  update_cv:
+    runs-on: ubuntu-latest
+    name: A job to make CV
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile CV
+        uses: ./
+      - name: Copy pdf files
+        run: |
+            mkdir ${{ github.workspace }}/build/
+            mv ${{ github.workspace }}/main.pdf ${{ github.workspace }}/build/CV.pdf
+      - name: Deploy to public repository
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:Fraudik/Public-CV-for-MSP-course.git
+          BRANCH: main
+          FOLDER: build
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      - name: Deploy to Github Pages
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
