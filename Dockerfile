@@ -1,11 +1,9 @@
 FROM ubuntu:18.10
 
-RUN apt-get update && apt-get install --yes --no-install-recommends \
-    biber \
+RUN apt-get update && apt-get upgrade && apt-get install --yes --no-install-recommends \
     cm-super \
     dvipng \
     texlive-base \
-    texlive-bibtex-extra \
     texlive-fonts-extra \
     texlive-fonts-recommended \
     texlive-generic-extra \
