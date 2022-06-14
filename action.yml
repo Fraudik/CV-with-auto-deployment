@@ -3,4 +3,3 @@ description: 'Build image and compile CV'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  
