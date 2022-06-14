@@ -1,6 +1,6 @@
 FROM ubuntu:18.10
 
-RUN apt-get update && apt-get upgrade && apt-get install --yes --no-install-recommends \
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list && apt-get update && apt-get dist-upgrade && apt-get install --yes --no-install-recommends \
     cm-super \
     dvipng \
     texlive-base \
