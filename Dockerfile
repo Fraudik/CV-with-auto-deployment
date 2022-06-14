@@ -17,4 +17,4 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && sed -i -re 's/([a-z]{2
 
 COPY CV /CV
 WORKDIR /CV
-CMD cd /CV && pdflatex -interaction=nonstopmode main.tex
+CMD cd /CV && pdflatex -interaction=nonstopmode main.tex && cp main.pdf ../
