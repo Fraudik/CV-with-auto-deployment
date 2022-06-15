@@ -13,9 +13,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: CV
-        path: main.pdf
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v2.0.9
-      with: 
-          name: CV 
-          path: path/to/PDF
+        path: CV/main.pdf
