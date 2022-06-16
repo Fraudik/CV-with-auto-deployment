@@ -13,8 +13,9 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && sed -i -re 's/([a-z]{2
     texlive-latex-extra \
     texlive-latex-recommended \
     texlive-pictures \
-    texlive-science
+    texlive-science \
+    git
 
 COPY CV /CV
 WORKDIR /CV
-CMD cd /CV && pdflatex -interaction=nonstopmode main.tex && cp main.pdf ../
+CMD cd /CV && pdflatex -interaction=nonstopmode -halt-on-error main.tex && cd .. && cp CV/main.pdf CV.pdf
