@@ -1,4 +1,6 @@
 \documentclass[10pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
 
 % Packages:
 \usepackage[
@@ -145,7 +147,10 @@
 \makeatletter
 \newcommand\notsotiny{\@setfontsize\notsotiny{9}{9}}
 \makeatother
-
+% \usepackage{tempora}
+\renewcommand{\rmdefault}{cmr} % Шрифт с засечками
+\renewcommand{\sfdefault}{cmss} % Шрифт без засечек
+\renewcommand{\ttdefault}{cmtt} % Моноширинный шрифт
 \begin{document}
     \notsotiny
     
@@ -158,7 +163,7 @@
 
     \begin{header}
         \begin{center}
-            \textbf{\Huge \scshape  Ilya Blinov} \\ \vspace{1pt}
+            \textbf{\Huge \scshape  Блинов Илья} \\ \vspace{1pt}
             \small {{ulkhan.2014@gmail.com}} $|$ Telegram:
             \href{https://t.me/iiblinov}{{@iiblinov}} $|$
             \href{https://github.com/Fraudik}{{github.com/Fraudik}}
@@ -180,27 +185,53 @@
         % \mbox{\hrefWithoutArrow{https://github.com/Fraudik}{\color{blue}{\footnotesize\faGithub}\hspace*{0.13cm}Fraudik}}%
     \end{header}
 
+    \section{Навыки}
 
+        
+        \begin{onecolentry}
+            \textbf{Разработка:} Python, SQL, asyncio, gevent, Pandas, Spark, NumPy, SQLAlchemy, FastAPI, Django (ORM, REST framework and Graphene), Flask, C++
 
-    \section{Experience}
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+
+        \begin{onecolentry}
+            \textbf{Технологии:} REST, GraphQL, gRPC, RabbitMQ, Kafka, Celery, PostgreSQL, SQLite, Redis
+
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+
+        \begin{onecolentry}
+            \textbf{DevOps \& Cloud:}  nginx, Gunicorn, Docker, Kubernetes (entry-level), Terraform, Ansible, CI \& CD, Git, bash, Grafana, Prometheus, Airflow
+        \end{onecolentry}
+
+        \vspace{0.1 cm}
+
+        \begin{onecolentry}
+            \textbf{Языки:} Русский (носитель), Английский (C1)
+        \end{onecolentry}
+        
+
+    \section{Опыт работы}
 
    
-        \begin{twocolentry}{            
-        {Since May 2023}}
-            \textbf{PriceCube, Middle Software Engineer}
+        \begin{twocolentry}{        
+        {С Мая 2023}}
+            \textbf{PriceCube, Разработчик бэкенда, Middle}
             
-            \textit{Analytics and ML-based pricing service for marketplaces}
+            {Сервис ценообразования с помощью машинного обучения на маркетплейсах}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Developed from scratch modules for API data collection and processing, integrated them into the existing system
-                \item Boosted existing data collection system performance by more than 5x \\ with asynchronous processing with threads, Celery, asyncio and data caching
-                \item Implemented product features from the design stage to the production stage
-                \item Drastically accelerated GraphQL data queries with data marts, pagination and caching
-                \item Developed a Kafka architecture for load balancing an arbitrary number of periodic tasks, including reducing peak load during their execution by more than 10x
-                \item Introduced a user story discussion prior to product feature implementation, \\ reducing further development time by an average of 1.5x
+                \item Разработал с нуля и интегрировал ETL модули для сбора и обработки данных по API
+                \item Разрабатывал продуктовые фичи от этапа проектирования до этапа выкатки в production
+                \item Увеличил производительность существующей системы сбора данных более чем в 5 раз \\ за счет асинхронной обработки с помощью потоков, Celery, asyncio и кэширования данных
+                \item Значительно ускорил запросы на GraphQL с помощью витрин данных, пагинации и кэширования
+                \item Внедрил архитектуру с Kafka для балансировки нагрузки от произвольного количества периодических задач, получив снижение пиковой нагрузки во время их выполнения более чем в 10 раз
+                \item Внедрил практику обсуждения User Flow перед разработкой новых продуктовых фич, что позволило сократить время дальнейшей разработки в среднем в 1,5 раза
             \end{highlights}
         \end{onecolentry}
 
@@ -208,31 +239,16 @@
 
         \begin{twocolentry}{
             
-        {September 2022 – May 2023}}
-        \textbf{Psychological Surveys System, Product Manager \& Software Engineer}
+        {Сентябрь 2022 – Май 2023}}
+        \textbf{Система психологических опросов, Разработчик бэкенда}
 
-        \textit{Microservice-based survey collection and processing system}
+        {Микросервисная система для сбора и анализа психологических опросов}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Led a team of 5 developers working on a microservice, communicated with other teams and the client
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.3 cm}
-
-        \begin{twocolentry}{
-            
-        {Summer 2024}}
-            \textbf{MIPT Summer Olympiad School, Lecturer}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Prepared and delivered lectures and workshops on the computer science sessions \\ devoted to algorithms and data structures
+                \item Руководил командой из 5 разработчиков над микросервисом
             \end{highlights}
         \end{onecolentry}
 
@@ -240,37 +256,52 @@
 
         \begin{twocolentry}{
             
-        {September 2022 – June 2025}}
-            \textbf{HSE University, Teaching Assistant}
+        {Лето 2024}}
+            \textbf{Летняя Олимпиадная школа МФТИ, Лектор}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Teaching assistant on courses "Python Programming", "C++ Programming Language", \\ "Algorithms and Data Structures"
-                \item Lead of teaching assistants on courses "C++ Programming Language", "Algorithms and Data Structures"
+                \item Подготавливал и читал лекции, а также проводил семинары по темам алгоритмов и структур данных
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+        {Сентябрь 2022 – Июнь 2025}}
+            \textbf{ВШЭ, Учебный ассистент}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Ассистировал на курсах «Программирование на Python», «Программирование на C++», \\ «Алгоритмы и структуры данных»
+                \item Руководил учебными ассистентами на курсах «Программирование на C++», \\ «Алгоритмы и структуры данных»
             \end{highlights}
         \end{onecolentry}
         
 
-    \section{Education}
+    \section{Образование}
 
         \begin{twocolentryED}{
             
             
         {2021 – 2025}}
-            \textbf{HSE, Faculty of Computer Science, Applied Mathematics and Informatics}
+            \textbf{ВШЭ, ФКН, Прикладная математика и информатика}
         \end{twocolentryED}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{GPA}: 9.6
-                \item \textbf{Relevant coursework:}  
-                Distributed Systems, Systems Design,
-                Database Infrastructure, Cloud Computing, \\ Theory and Practice of Concurrency,
-                Computer Architecture, Computer Networks, Python, C++
-                \item \textbf{Minor}: UX-design
+                \item \textbf{GPA}: \underline{9.6}
+                \item \textbf{Релевантные курсы:}
+                Распределенные системы, Дизайн систем,
+                Системы баз данных, Облачные вычисления, \\ Теория и практика многопоточной синхронизации,
+                Архитектура компьютеров и операционные системы, Компьютерные сети, Python, C++
+                \item \textbf{Minor}: UX-дизайн
             \end{highlights}
         \end{onecolentry}
 
@@ -280,118 +311,92 @@
             
             
         {2018 – 2020}}
-            \textbf{Yandex Lyceum, Fundamentals of Industrial Programming}
+            \textbf{Яндекс Лицей, Промышленное программирование на Python}
         \end{twocolentryED}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{One of the top graduates}, certificate number: 2002 21215 \ (\href{https://lms.yandex.ru/certificate/check}{link for check})
-                \item \textbf{Relevant coursework:}  
-                Web Development, Database Development, Asynchronous Programming, Python
+                \item \textbf{Вошёл в топ выпускников проекта}, номер сертификата: 2002 21215 \ (\href{https://lms.yandex.ru/certificate/check}{ссылка для проверки})
+                \item \textbf{Релевантные курсы:}  
+                Веб-разработка, Работа с базами данных, Асинхронное программирование, Python
             \end{highlights}
         \end{onecolentry}
 
 
-    \section{Achievements}
+    \section{Достижения}
 
         
         \begin{samepage}
             \begin{twocolentry}{
                 2023
             }
-                \mbox{\textbf{Laureate of the Ilya Segalovich Scholarship} \ (\href{https://cs.hse.ru/iseg}{link})} \\ \mbox{(Top 10/3000+ students of the Faculty of Computer Science)}
+                \mbox{\textbf{Лауреат стипендии имени Ильи Сегаловича} (топ 10/3000+ студентов ФКН) \ \href{https://cs.hse.ru/iseg}{ссылка}}
+                %\\ \mbox{(Топ 10/3000+ студентов ФКН)}
             \end{twocolentry}
 
-        \vspace{0.1 cm}
+        % \vspace{0.1 cm}
 
              \begin{twocolentry}{
                 2024
             }
-                \mbox{\textbf{Winner of the Yandex scholarship competition for IT teaching assistants} \ (\href{https://education.yandex.ru/teaching-assistants}{link})} \\ \mbox{(countrywide)}
+                \mbox{\textbf{Победитель конкурса Яндекса ассистентов преподавателей IT-дисциплин} \ \href{https://education.yandex.ru/teaching-assistants}{ссылка}} 
+                % \\ \mbox{(со всей страны)}
             \end{twocolentry}
 
-        \vspace{0.1 cm}
-
              \begin{twocolentry}{
-                Second semester, 2024
+                Второй семестр, 2024
             }
-                \mbox{\textbf{Winner of the HSE FCS scholarship "Best teaching assistant"} \ (\href{https://cs.hse.ru/initiative/bestassistants}{link})}
+                \mbox{\textbf{Лауреат стипендии ФКН ВШЭ \ "Лучший учебный ассистент"} \ \href{https://cs.hse.ru/initiative/bestassistants}{ссылка}}
             \end{twocolentry}
             
         \end{samepage}
 
+                \vspace{-0.2 cm}
 
-    \section{Research}
+    \section{Исследования}
         
         \begin{samepage}
-            \begin{twocolentry}{
-                2025
+            \begin{twocolentryED}{
+                2025 (wip)
             }
-                \mbox{I.Blinov, \textbf{Parallel simulation of multi-agent systems behavior modeled}} \\ \mbox{\textbf{by base Petri nets and workflow nets with non-blocking synchronization}} (wip)
-            \end{twocolentry}
+                \mbox{И.Блинов, \textbf{Параллельная симуляция поведения мультиагентных систем с неблокирующей}} \\ \mbox{\textbf{синхронизацией, моделируемых базовыми сетями Петри и сетями рабочих процессов}}
+            \end{twocolentryED}
         \end{samepage}
 
 
-                \vspace{-0.3 cm}
+                \vspace{-0.2 cm}
 
-       \section{Projects}
+       \section{Проекты}
 
         \begin{twocolentryED}{
             
         {2024}}
-            \textbf{Large Prime Numbers, Term paper}
+            \textbf{Большие простые числа, Курсовой проект}
         \end{twocolentryED}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Advanced algorithms for checking numbers for primality in C++ with GMPXX
-                (\href{https://github.com/Fraudik/LargePrimeNumbers}{link})
+                \item Продвинутые алгоритмы проверки чисел на простоту на C++ с использованием GMPXX
+                (\href{https://github.com/Fraudik/LargePrimeNumbers}{ссылка})
             \end{highlights}
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{twocolentryED}{
-            
-            
+
         {2022}}
-            \textbf{BMP Image Processor, Educational Project}
+            \textbf{Обработчик изображений BMP, Учебный проект}
         \end{twocolentryED}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item C++ console application for BMP image transformations  (\href{https://github.com/Fraudik/BMP-Image-Processor}{link})
+                \item Консольное приложение на C++ для преобразования изображений в формате BMP
+                (\href{https://github.com/Fraudik/BMP-Image-Processor}{ссылка})
             \end{highlights}
-        \end{onecolentry}
-    
-    \section{Technical Skills}
-
-        
-        \begin{onecolentry}
-            \textbf{Development:} Python, SQL, asyncio, gevent, Pandas, NumPy, SQLAlchemy, FastAPI, Django (ORM, REST framework and Graphene), Flask, C++
-
-        \end{onecolentry}
-
-        \vspace{0.1 cm}
-
-        \begin{onecolentry}
-            \textbf{Technologies:} REST, GraphQL, gRPC, RabbitMQ, Kafka, Celery, PostgreSQL, SQLite, Redis
-
-        \end{onecolentry}
-
-        \vspace{0.1 cm}
-
-        \begin{onecolentry}
-            \textbf{DevOps \& Cloud:}  nginx, Gunicorn, Docker, Kubernetes (entry-level), Terraform, CI \& CD, Git, bash, Grafana, Prometheus, Airflow
-        \end{onecolentry}
-
-        \vspace{0.1 cm}
-
-        \begin{onecolentry}
-            \textbf{Languages:} Russian (native), English (C1)
         \end{onecolentry}
 
 \end{document}
